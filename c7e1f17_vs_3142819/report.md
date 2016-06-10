@@ -4,9 +4,9 @@
 
 *Commit(s):* [jrevels/julia@c7e1f179cd0a3924019e96ee0857cd805531755e](https://github.com/jrevels/julia/commit/c7e1f179cd0a3924019e96ee0857cd805531755e) vs [jrevels/julia@3142819516da68d5d928bf66456ad633bc53c915](https://github.com/jrevels/julia/commit/3142819516da68d5d928bf66456ad633bc53c915)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/pull/5#issuecomment-224360284)
+*Triggered By:* [link](https://github.com/jrevels/julia/pull/5#issuecomment-225053667)
 
-*Tag Predicate:* `"array" && !"linalg"`
+*Tag Predicate:* `ALL`
 
 ## Results
 
@@ -42,10 +42,36 @@ Here's a list of all the benchmark groups executed by this job:
 - `["array","reverse"]`
 - `["array","setindex!"]`
 - `["array","subarray"]`
+- `["io","read"]`
+- `["io"]`
+- `["linalg","arithmetic"]`
+- `["linalg","blas"]`
+- `["linalg","factorization"]`
+- `["micro"]`
+- `["parallel","remotecall"]`
+- `["problem","fem"]`
+- `["problem","go"]`
+- `["problem","grigoriadis khachiyan"]`
+- `["problem","imdb"]`
+- `["problem","json"]`
 - `["problem","laplacian"]`
+- `["problem","monte carlo"]`
+- `["problem"]`
+- `["problem","seismic"]`
+- `["scalar","arithmetic"]`
+- `["scalar","fastmath"]`
+- `["scalar","iteration"]`
+- `["scalar","predicate"]`
+- `["shootout"]`
 - `["simd"]`
+- `["sort","insertionsort"]`
+- `["sort","issorted"]`
+- `["sort","mergesort"]`
+- `["sort","quicksort"]`
 - `["sparse","index"]`
 - `["sparse","transpose"]`
+- `["string"]`
+- `["tuple","index"]`
 
 ## Version Info
 
@@ -60,15 +86,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (28214.9140625 MB free)
-Uptime: 979456.0 sec
-Load Avg:  0.9970703125  1.0146484375  0.9833984375
+Memory: 31.383651733398438 GB (27085.90234375 MB free)
+Uptime: 1.163761e6 sec
+Load Avg:  0.9228515625  0.998046875  0.9599609375
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz     847830 s          0 s     246769 s   96601947 s          3 s
-#2  3501 MHz    1226220 s          0 s     101266 s   96559546 s          0 s
-#3  3501 MHz     458715 s          0 s     102676 s   97330134 s          0 s
-#4  3501 MHz     332904 s          0 s      82972 s   97494601 s          1 s
+#1  3501 MHz    1347024 s          0 s     333214 s  114393840 s          3 s
+#2  3501 MHz    2518450 s          0 s     156852 s  113630963 s          0 s
+#3  3501 MHz    1084594 s          0 s     158770 s  115067383 s          1 s
+#4  3501 MHz     720718 s          0 s     126088 s  115487617 s          1 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
@@ -88,15 +114,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (28129.3125 MB free)
-Uptime: 983030.0 sec
-Load Avg:  0.9970703125  0.96923828125  0.94970703125
+Memory: 31.383651733398438 GB (26767.42578125 MB free)
+Uptime: 1.16838e6 sec
+Load Avg:  1.01123046875  1.01953125  0.9814453125
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz     954169 s          0 s     256155 s   96842694 s          3 s
-#2  3501 MHz    1352453 s          0 s     109573 s   96782045 s          0 s
-#3  3501 MHz     515532 s          0 s     108393 s   97624289 s          0 s
-#4  3501 MHz     371836 s          0 s      88177 s   97807365 s          1 s
+#1  3501 MHz    1397920 s          0 s     340379 s  114796174 s          3 s
+#2  3501 MHz    2710979 s          0 s     162704 s  113893872 s          0 s
+#3  3501 MHz    1204679 s          0 s     167470 s  115399874 s          1 s
+#4  3501 MHz     790672 s          0 s     133492 s  115871621 s          1 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
