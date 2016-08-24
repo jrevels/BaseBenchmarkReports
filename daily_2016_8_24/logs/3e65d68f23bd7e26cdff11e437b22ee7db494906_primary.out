@@ -1,62 +1,62 @@
-cset: moving following pidspec: 14717
+cset: moving following pidspec: 15221
 cset: moving 1 userspace tasks to /user/child
 cset: done
 LOADING SUITE...
-loading group "string"...done (took 0.556807063 seconds)
-loading group "linalg"...done (took 6.618216563 seconds)
-loading group "parallel"...done (took 0.221363591 seconds)
-loading group "tuple"...done (took 0.748106993 seconds)
-loading group "micro"...done (took 0.21366388 seconds)
-loading group "io"...done (took 0.078271984 seconds)
-loading group "scalar"...done (took 17.458898632 seconds)
-loading group "sparse"...done (took 4.298198434 seconds)
-loading group "simd"...done (took 2.058343174 seconds)
-loading group "problem"...done (took 1.941133821 seconds)
-loading group "array"...done (took 6.793647638 seconds)
-loading group "sort"...done (took 2.816149319 seconds)
-loading group "shootout"...done (took 0.882365844 seconds)
+loading group "string"...done (took 0.557741505 seconds)
+loading group "linalg"...done (took 6.616374226 seconds)
+loading group "parallel"...done (took 0.220458194 seconds)
+loading group "tuple"...done (took 0.747324435 seconds)
+loading group "micro"...done (took 0.213075193 seconds)
+loading group "io"...done (took 0.078906267 seconds)
+loading group "scalar"...done (took 17.435382017 seconds)
+loading group "sparse"...done (took 4.296978275 seconds)
+loading group "simd"...done (took 2.055222669 seconds)
+loading group "problem"...done (took 1.939829448 seconds)
+loading group "array"...done (took 6.778157977 seconds)
+loading group "sort"...done (took 2.809550793 seconds)
+loading group "shootout"...done (took 0.880531985 seconds)
 FILTERING SUITE...
 WARMING UP BENCHMARKS...
 (1/3) benchmarking "string"...
   (1/2) benchmarking "join"...
-  done (took 0.339798091 seconds)
+  done (took 0.341668742 seconds)
   (2/2) benchmarking "replace"...
-  done (took 0.066195964 seconds)
-done (took 0.599583882 seconds)
+  done (took 0.06553922 seconds)
+done (took 0.60113595 seconds)
 (2/3) benchmarking "io"...
   (1/1) benchmarking "read"...
     (1/2) benchmarking "readstring"...
-    done (took 0.067819273 seconds)
+    done (took 0.068222576 seconds)
     (2/2) benchmarking "read"...
-    done (took 0.069258466 seconds)
-  done (took 0.305257844 seconds)
-done (took 0.60136552 seconds)
+    done (took 0.069444351 seconds)
+  done (took 0.306615446 seconds)
+done (took 0.602882172 seconds)
 (3/3) benchmarking "problem"...
   (1/1) benchmarking "spellcheck"...
     (1/1) benchmarking "spellcheck"...
-    done (took 9.970701484 seconds)
-  done (took 10.136769184 seconds)
-done (took 10.303530858 seconds)
+    done (took 9.972803705 seconds)
+  done (took 10.138725654 seconds)
+done (took 10.305019848 seconds)
 RUNNING BENCHMARKS...
 (1/3) benchmarking "string"...
   (1/2) benchmarking "join"...
-  done (took 1.229729403 seconds)
+  done (took 1.231175605 seconds)
   (2/2) benchmarking "replace"...
-  done (took 1.305385461 seconds)
-done (took 2.702384148 seconds)
+  done (took 1.306114955 seconds)
+done (took 2.704427897 seconds)
 (2/3) benchmarking "io"...
   (1/1) benchmarking "read"...
     (1/2) benchmarking "readstring"...
-    done (took 0.714357653 seconds)
+    done (took 0.707673737 seconds)
     (2/2) benchmarking "read"...
-    done (took 0.518168635 seconds)
-  done (took 1.397101737 seconds)
-done (took 1.563588348 seconds)
+    done (took 0.518500792 seconds)
+  done (took 1.391036895 seconds)
+done (took 1.55716026 seconds)
 (3/3) benchmarking "problem"...
   (1/1) benchmarking "spellcheck"...
     (1/1) benchmarking "spellcheck"...
-    done (took 9.166923753 seconds)
-  done (took 9.331432778 seconds)
-done (took 9.496332277 seconds)
+    done (took 9.316815898 seconds)
+  done (took 9.481453706 seconds)
+done (took 9.646643042 seconds)
 SAVING RESULT...
 DONE!

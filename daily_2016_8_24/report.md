@@ -4,11 +4,11 @@
 
 *Commit(s):* [jrevels/julia@3e65d68f23bd7e26cdff11e437b22ee7db494906](https://github.com/jrevels/julia/commit/3e65d68f23bd7e26cdff11e437b22ee7db494906)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/commit/3e65d68f23bd7e26cdff11e437b22ee7db494906#commitcomment-18764011)
+*Triggered By:* [link](https://github.com/jrevels/julia/commit/3e65d68f23bd7e26cdff11e437b22ee7db494906#commitcomment-18764212)
 
 *Tag Predicate:* `"string"`
 
-*Daily Job:* 2016-08-24
+*Daily Job:* 2016-08-24 vs 2016-08-23
 
 ## Results
 
@@ -24,13 +24,14 @@ benchmarks.
 The percentages accompanying time and memory values in the below table are noise tolerances. The "true"
 time/memory value for a given benchmark is expected to fall within this percentage of the reported value.
 
-| ID | time | GC time | memory | allocations |
-|----|------|---------|--------|-------------|
-| `["io","read","read"]` | 6.86 μs (15%) | 0.00 ns | 0.00 bytes (1%) | 0 |
-| `["io","read","readstring"]` | 28.00 ns (15%) | 0.00 ns | 96.00 bytes (1%) | 1 |
-| `["problem","spellcheck","spellcheck"]` | 9.00 s (15%) | 1.57 s | 5.50 gb (1%) | 111879414 |
-| `["string","join"]` | 104.68 ms (40%) | 36.30 ms | 128.99 mb (1%) | 20 |
-| `["string","replace"]` | 146.11 μs (15%) | 0.00 ns | 12.11 kb (1%) | 6 |
+A ratio greater than `1.0` denotes a possible regression (marked with :x:), while a ratio less
+than `1.0` denotes a possible improvement (marked with :white_check_mark:). Only significant results - results
+that indicate possible regressions or improvements - are shown below (thus, an empty table means that all
+benchmark results remained invariant between builds).
+
+| ID | time ratio | memory ratio |
+|----|------------|--------------|
+| `["string","join"]` | 1.54 (40%) :x: | 1.00 (1%)  |
 
 ## Benchmark Group List
 
@@ -53,15 +54,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (23813.72265625 MB free)
-Uptime: 7.70699e6 sec
-Load Avg:  0.775390625  0.3232421875  0.20947265625
+Memory: 31.383651733398438 GB (23819.2734375 MB free)
+Uptime: 7.707705e6 sec
+Load Avg:  0.806640625  0.3212890625  0.2080078125
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz    1919246 s          0 s    1544040 s  765288719 s         25 s
-#2  3501 MHz    4503915 s          0 s     520292 s  765311038 s          1 s
-#3  3501 MHz    1887998 s          0 s     716442 s  767616176 s          3 s
-#4  3501 MHz    1484899 s          0 s     576789 s  768327341 s          6 s
+#1  3501 MHz    1920664 s          0 s    1544218 s  765358453 s         25 s
+#2  3501 MHz    4512218 s          0 s     520396 s  765374123 s          1 s
+#3  3501 MHz    1888266 s          0 s     716506 s  767687328 s          3 s
+#4  3501 MHz    1484946 s          0 s     576839 s  768398740 s          6 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
