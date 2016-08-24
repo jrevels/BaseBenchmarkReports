@@ -4,7 +4,7 @@
 
 *Commit(s):* [jrevels/julia@3e65d68f23bd7e26cdff11e437b22ee7db494906](https://github.com/jrevels/julia/commit/3e65d68f23bd7e26cdff11e437b22ee7db494906)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/commit/3e65d68f23bd7e26cdff11e437b22ee7db494906#commitcomment-18762896)
+*Triggered By:* [link](https://github.com/jrevels/julia/commit/3e65d68f23bd7e26cdff11e437b22ee7db494906#commitcomment-18763091)
 
 *Tag Predicate:* `"string"`
 
@@ -27,10 +27,10 @@ time/memory value for a given benchmark is expected to fall within this percenta
 | ID | time | GC time | memory | allocations |
 |----|------|---------|--------|-------------|
 | `["io","read","read"]` | 6.86 μs (15%) | 0.00 ns | 0.00 bytes (1%) | 0 |
-| `["io","read","readstring"]` | 27.00 ns (15%) | 0.00 ns | 96.00 bytes (1%) | 1 |
-| `["problem","spellcheck","spellcheck"]` | 8.40 s (15%) | 1.19 s | 5.50 gb (1%) | 111879414 |
-| `["string","join"]` | 68.47 ms (40%) | 0.00 ns | 128.99 mb (1%) | 20 |
-| `["string","replace"]` | 144.64 μs (15%) | 0.00 ns | 12.11 kb (1%) | 6 |
+| `["io","read","readstring"]` | 29.00 ns (15%) | 0.00 ns | 96.00 bytes (1%) | 1 |
+| `["problem","spellcheck","spellcheck"]` | 8.95 s (15%) | 1.57 s | 5.50 gb (1%) | 111879414 |
+| `["string","join"]` | 104.94 ms (40%) | 36.64 ms | 128.99 mb (1%) | 20 |
+| `["string","replace"]` | 146.02 μs (15%) | 0.00 ns | 12.11 kb (1%) | 6 |
 
 ## Benchmark Group List
 
@@ -53,15 +53,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (23822.64453125 MB free)
-Uptime: 7.702829e6 sec
-Load Avg:  0.7529296875  0.2685546875  0.1337890625
+Memory: 31.383651733398438 GB (23814.015625 MB free)
+Uptime: 7.703672e6 sec
+Load Avg:  0.69677734375  0.24365234375  0.142578125
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz    1916931 s          0 s    1542977 s  764877119 s         25 s
-#2  3501 MHz    4453910 s          0 s     519523 s  764945882 s          1 s
-#3  3501 MHz    1885666 s          0 s     716077 s  767202901 s          3 s
-#4  3501 MHz    1483603 s          0 s     576559 s  767912807 s          6 s
+#1  3501 MHz    1917083 s          0 s    1543164 s  764960849 s         25 s
+#2  3501 MHz    4462184 s          0 s     519634 s  765021752 s          1 s
+#3  3501 MHz    1886052 s          0 s     716140 s  767286717 s          3 s
+#4  3501 MHz    1483606 s          0 s     576593 s  767997056 s          6 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
