@@ -4,7 +4,7 @@
 
 *Commit(s):* [jrevels/julia@f6b1e5398cf10e3c1f86c96fac616c705d845721](https://github.com/jrevels/julia/commit/f6b1e5398cf10e3c1f86c96fac616c705d845721) vs [jrevels/julia@0287a9971ea4d740d2bc5e205423e2ae5bdf4124](https://github.com/jrevels/julia/commit/0287a9971ea4d740d2bc5e205423e2ae5bdf4124)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250452246)
+*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250556640)
 
 *Tag Predicate:* `ALL`
 
@@ -29,8 +29,7 @@ benchmark results remained invariant between builds).
 
 | ID | time ratio | memory ratio |
 |----|------------|--------------|
-| `["linalg","factorization",("lu","Tridiagonal",1024)]` | 1.42 (25%) :x: | 1.00 (1%)  |
-| `["nullable","nullablearray",("perf_sum","Array","Int8")]` | 1.25 (15%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("lu","Tridiagonal",1024)]` | 0.75 (25%) :white_check_mark: | 1.00 (1%)  |
 
 ## Benchmark Group List
 
@@ -93,15 +92,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (13969.2421875 MB free)
-Uptime: 1.0802352e7 sec
-Load Avg:  1.0029296875  1.00927734375  0.95458984375
+Memory: 31.383651733398438 GB (16957.859375 MB free)
+Uptime: 1.0826e7 sec
+Load Avg:  1.0029296875  1.0146484375  0.970703125
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz    2228816 s          0 s    2115800 s  1073162175 s         35 s
-#2  3501 MHz    5604056 s          0 s     776449 s  1073304334 s          2 s
-#3  3501 MHz    2289732 s          0 s     949590 s  1076348312 s          5 s
-#4  3501 MHz    1717754 s          0 s     771261 s  1077322651 s          7 s
+#1  3501 MHz    2331558 s          0 s    2135705 s  1075395875 s         35 s
+#2  3501 MHz    6700993 s          0 s     796473 s  1074551175 s          2 s
+#3  3501 MHz    2414342 s          0 s     962403 s  1078573932 s          5 s
+#4  3501 MHz    1879850 s          0 s     787208 s  1079508302 s          7 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
@@ -121,15 +120,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (13729.92578125 MB free)
-Uptime: 1.080707e7 sec
-Load Avg:  0.9228515625  0.998046875  0.96533203125
+Memory: 31.383651733398438 GB (16683.046875 MB free)
+Uptime: 1.0831638e7 sec
+Load Avg:  1.0322265625  1.03662109375  0.994140625
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz    2283464 s          0 s    2123064 s  1073570439 s         35 s
-#2  3501 MHz    5807820 s          0 s     783592 s  1073564768 s          2 s
-#3  3501 MHz    2347426 s          0 s     956120 s  1076755040 s          5 s
-#4  3501 MHz    1843070 s          0 s     781101 s  1077658866 s          7 s
+#1  3501 MHz    2389668 s          0 s    2143088 s  1075892137 s         35 s
+#2  3501 MHz    7010930 s          0 s     804659 s  1074796367 s          2 s
+#3  3501 MHz    2463122 s          0 s     968782 s  1079081705 s          5 s
+#4  3501 MHz    1996278 s          0 s     796402 s  1079945951 s          7 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
