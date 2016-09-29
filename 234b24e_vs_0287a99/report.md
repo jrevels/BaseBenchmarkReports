@@ -4,137 +4,17 @@
 
 *Commit(s):* [jrevels/julia@234b24e5248c798222de97d4a505397ba764feaf](https://github.com/jrevels/julia/commit/234b24e5248c798222de97d4a505397ba764feaf) vs [jrevels/julia@0287a9971ea4d740d2bc5e205423e2ae5bdf4124](https://github.com/jrevels/julia/commit/0287a9971ea4d740d2bc5e205423e2ae5bdf4124)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250191696)
+*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250531303)
 
 *Tag Predicate:* `ALL`
 
-## Results
+## Error
 
-*Note: If Chrome is your browser, I strongly recommend installing the [Wide GitHub](https://chrome.google.com/webstore/detail/wide-github/kaalofacklcidaampbokdplbklpeldpj?hl=en)
-extension, which makes the result table easier to read.*
-
-Below is a table of this job's results, obtained by running the benchmarks found in
-[JuliaCI/BaseBenchmarks.jl](https://github.com/JuliaCI/BaseBenchmarks.jl). The values
-listed in the `ID` column have the structure `[parent_group, child_group, ..., key]`,
-and can be used to index into the BaseBenchmarks suite to retrieve the corresponding
-benchmarks.
-
-The percentages accompanying time and memory values in the below table are noise tolerances. The "true"
-time/memory value for a given benchmark is expected to fall within this percentage of the reported value.
-
-A ratio greater than `1.0` denotes a possible regression (marked with :x:), while a ratio less
-than `1.0` denotes a possible improvement (marked with :white_check_mark:). Only significant results - results
-that indicate possible regressions or improvements - are shown below (thus, an empty table means that all
-benchmark results remained invariant between builds).
-
-| ID | time ratio | memory ratio |
-|----|------------|--------------|
-| `["linalg","arithmetic",("*","Diagonal","Diagonal",1024)]` | 0.58 (30%) :white_check_mark: | 1.00 (1%)  |
-| `["sort","issorted",("forwards","ascending")]` | 1.22 (15%) :x: | 1.00 (1%)  |
-| `["sparse","index",("spmat","col","range",1000)]` | 1.93 (15%) :x: | 1.00 (1%)  |
-
-## Benchmark Group List
-
-Here's a list of all the benchmark groups executed by this job:
-
-- `["array","bool"]`
-- `["array","cat"]`
-- `["array","comprehension"]`
-- `["array","growth"]`
-- `["array","index"]`
-- `["array","reverse"]`
-- `["array","setindex!"]`
-- `["array","subarray"]`
-- `["io","read"]`
-- `["linalg","arithmetic"]`
-- `["linalg","blas"]`
-- `["linalg","factorization"]`
-- `["micro"]`
-- `["nullable","basic"]`
-- `["nullable","nullablearray"]`
-- `["parallel","remotecall"]`
-- `["problem","fem"]`
-- `["problem","go"]`
-- `["problem","grigoriadis khachiyan"]`
-- `["problem","imdb"]`
-- `["problem","json"]`
-- `["problem","laplacian"]`
-- `["problem","monte carlo"]`
-- `["problem","raytrace"]`
-- `["problem","seismic"]`
-- `["problem","simplex"]`
-- `["problem","spellcheck"]`
-- `["problem","stockcorr"]`
-- `["problem","ziggurat"]`
-- `["scalar","arithmetic"]`
-- `["scalar","fastmath"]`
-- `["scalar","iteration"]`
-- `["scalar","predicate"]`
-- `["shootout"]`
-- `["simd"]`
-- `["sort","insertionsort"]`
-- `["sort","issorted"]`
-- `["sort","mergesort"]`
-- `["sort","quicksort"]`
-- `["sparse","index"]`
-- `["sparse","transpose"]`
-- `["string"]`
-- `["tuple","index"]`
-
-## Version Info
-
-#### Primary Build
+The build could not finish due to an error:
 
 ```
-Julia Version 0.6.0-dev.813
-Commit 0287a99 (2016-09-28 04:05 UTC)
-Platform Info:
-  OS: Linux (x86_64-linux-gnu)
-  CPU: Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz
-  WORD_SIZE: 64
-           Ubuntu 14.04.4 LTS
-  uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (16863.51171875 MB free)
-Uptime: 1.0721928e7 sec
-Load Avg:  1.0029296875  0.9853515625  0.873046875
-Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
-       speed         user         nice          sys         idle          irq
-#1  3501 MHz    2119102 s          0 s    2094192 s  1065270981 s         35 s
-#2  3501 MHz    5202793 s          0 s     760032 s  1065684315 s          2 s
-#3  3501 MHz    2235568 s          0 s     937413 s  1068377269 s          5 s
-#4  3501 MHz    1660082 s          0 s     758839 s  1069354753 s          7 s
-
-  BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
-  LAPACK: libopenblas64_
-  LIBM: libopenlibm
-  LLVM: libLLVM-3.7.1 (ORCJIT, haswell)
-
+NanosoldierError: failed to run benchmarks against primary commit: ErrorException("failed process: Process(`sudo cset shield -e su nanosoldier -- -c ./benchscript.sh`, ProcessExited(1)) [1]")
 ```
 
-#### Comparison Build
+Check the logs folder in this directory for more detailed output.
 
-```
-Julia Version 0.6.0-dev.813
-Commit 0287a99 (2016-09-28 04:05 UTC)
-Platform Info:
-  OS: Linux (x86_64-linux-gnu)
-  CPU: Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz
-  WORD_SIZE: 64
-           Ubuntu 14.04.4 LTS
-  uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (16495.10546875 MB free)
-Uptime: 1.0723793e7 sec
-Load Avg:  0.9228515625  0.998046875  0.9599609375
-Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
-       speed         user         nice          sys         idle          irq
-#1  3501 MHz    2119142 s          0 s    2094925 s  1065455947 s         35 s
-#2  3501 MHz    5384638 s          0 s     764223 s  1065684719 s          2 s
-#3  3501 MHz    2235838 s          0 s     937431 s  1068563444 s          5 s
-#4  3501 MHz    1660085 s          0 s     758855 s  1069541200 s          7 s
-
-  BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
-  LAPACK: libopenblas64_
-  LIBM: libopenlibm
-  LLVM: libLLVM-3.7.1 (ORCJIT, haswell)
-
-```
