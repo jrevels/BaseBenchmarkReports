@@ -4,7 +4,7 @@
 
 *Commit(s):* [jrevels/julia@234b24e5248c798222de97d4a505397ba764feaf](https://github.com/jrevels/julia/commit/234b24e5248c798222de97d4a505397ba764feaf) vs [jrevels/julia@0287a9971ea4d740d2bc5e205423e2ae5bdf4124](https://github.com/jrevels/julia/commit/0287a9971ea4d740d2bc5e205423e2ae5bdf4124)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250746858)
+*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250772352)
 
 *Tag Predicate:* `ALL`
 

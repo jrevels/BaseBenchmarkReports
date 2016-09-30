@@ -5,7 +5,7 @@ WARNING: blas_set_num_threads is deprecated, use BLAS.set_num_threads instead.
  in include(::String) at ./sysimg.jl:14
  in process_options(::Base.JLOptions) at ./client.jl:271
  in _start() at ./client.jl:335
-while loading /home/nanosoldier/test_workdir/tmpW0KOdM/benchscript.jl, in expression starting on line 8
+while loading /home/nanosoldier/test_workdir/tmpPhGsrV/benchscript.jl, in expression starting on line 8
 ERROR: LoadError: UndefVarError: gcscrub not defined
  in #_run#117(::Bool, ::String, ::Array{Any,1}, ::Function, ::BenchmarkTools.Benchmark{Symbol("##benchmark#618")}, ::BenchmarkTools.Parameters) at /home/nanosoldier/.julia/v0.6/BenchmarkTools/src/execution.jl:281
  in (::BenchmarkTools.#kw##_run)(::Array{Any,1}, ::BenchmarkTools.#_run, ::BenchmarkTools.Benchmark{Symbol("##benchmark#618")}, ::BenchmarkTools.Parameters) at ./<missing>:0
@@ -22,4 +22,4 @@ ERROR: LoadError: UndefVarError: gcscrub not defined
  in include(::String) at ./sysimg.jl:14
  in process_options(::Base.JLOptions) at ./client.jl:271
  in _start() at ./client.jl:335
-while loading /home/nanosoldier/test_workdir/tmpW0KOdM/benchscript.jl, in expression starting on line 25
+while loading /home/nanosoldier/test_workdir/tmpPhGsrV/benchscript.jl, in expression starting on line 25
