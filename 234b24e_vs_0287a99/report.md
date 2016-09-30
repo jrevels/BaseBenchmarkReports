@@ -4,9 +4,9 @@
 
 *Commit(s):* [jrevels/julia@234b24e5248c798222de97d4a505397ba764feaf](https://github.com/jrevels/julia/commit/234b24e5248c798222de97d4a505397ba764feaf) vs [jrevels/julia@0287a9971ea4d740d2bc5e205423e2ae5bdf4124](https://github.com/jrevels/julia/commit/0287a9971ea4d740d2bc5e205423e2ae5bdf4124)
 
-*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250813821)
+*Triggered By:* [link](https://github.com/jrevels/julia/pull/6#issuecomment-250840453)
 
-*Tag Predicate:* `ALL`
+*Tag Predicate:* `"factorization"`
 
 ## Results
 
@@ -29,57 +29,76 @@ benchmark results remained invariant between builds).
 
 | ID | time ratio | memory ratio |
 |----|------------|--------------|
-| `["array","growth",("prerend!",2048)]` | 1.15 (15%) :x: | 1.00 (1%)  |
-| `["linalg","factorization",("lu","Tridiagonal",1024)]` | 1.58 (25%) :x: | 1.18 (1%) :x: |
-| `["nullable","nullablearray",("perf_any","NullableArray")]` | 1.55 (30%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("chol","Matrix",1024)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("chol","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("cholfact","Matrix",1024)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("cholfact","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","Bidiagonal",1024)]` | 0.83 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","Bidiagonal",256)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","Diagonal",1024)]` | 1.05 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","Diagonal",256)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","LowerTriangular",1024)]` | 0.98 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","LowerTriangular",256)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","Matrix",1024)]` | 1.03 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","SymTridiagonal",1024)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","SymTridiagonal",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","UpperTriangular",1024)]` | 0.96 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eig","UpperTriangular",256)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","Bidiagonal",1024)]` | 0.89 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","Bidiagonal",256)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","Diagonal",1024)]` | 1.05 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","Diagonal",256)]` | 1.16 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","LowerTriangular",1024)]` | 0.97 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","LowerTriangular",256)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","Matrix",1024)]` | 1.03 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","Matrix",256)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","SymTridiagonal",1024)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","SymTridiagonal",256)]` | 0.99 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","UpperTriangular",1024)]` | 0.97 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("eigfact","UpperTriangular",256)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("lu","Matrix",1024)]` | 0.94 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("lu","Matrix",256)]` | 1.02 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("lu","Tridiagonal",1024)]` | 0.78 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("lu","Tridiagonal",256)]` | 0.99 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("lufact","Matrix",1024)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("lufact","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("lufact","Tridiagonal",1024)]` | 1.06 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("lufact","Tridiagonal",256)]` | 1.09 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("qr","Matrix",1024)]` | 0.98 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("qr","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("qrfact","Matrix",1024)]` | 1.04 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("qrfact","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("schur","Matrix",1024)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("schur","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("schurfact","Matrix",1024)]` | 1.03 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("schurfact","Matrix",256)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","Bidiagonal",1024)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","Bidiagonal",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","Diagonal",1024)]` | 0.74 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","Diagonal",256)]` | 1.04 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","LowerTriangular",1024)]` | 1.02 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","LowerTriangular",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","Matrix",1024)]` | 1.10 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","UpperTriangular",1024)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svd","UpperTriangular",256)]` | 1.00 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","Bidiagonal",1024)]` | 0.97 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","Bidiagonal",256)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","Diagonal",1024)]` | 0.78 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","Diagonal",256)]` | 1.04 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","LowerTriangular",1024)]` | 1.06 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","LowerTriangular",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","Matrix",1024)]` | 1.01 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","Matrix",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","UpperTriangular",1024)]` | 0.99 (0%) :white_check_mark: | 1.00 (1%)  |
+| `["linalg","factorization",("svdfact","UpperTriangular",256)]` | 1.00 (0%) :x: | 1.00 (1%)  |
 
 ## Benchmark Group List
 
 Here's a list of all the benchmark groups executed by this job:
 
-- `["array","bool"]`
-- `["array","cat"]`
-- `["array","comprehension"]`
-- `["array","growth"]`
-- `["array","index"]`
-- `["array","reverse"]`
-- `["array","setindex!"]`
-- `["array","subarray"]`
-- `["io","read"]`
-- `["linalg","arithmetic"]`
-- `["linalg","blas"]`
 - `["linalg","factorization"]`
-- `["micro"]`
-- `["nullable","basic"]`
-- `["nullable","nullablearray"]`
-- `["parallel","remotecall"]`
-- `["problem","fem"]`
-- `["problem","go"]`
-- `["problem","grigoriadis khachiyan"]`
-- `["problem","imdb"]`
-- `["problem","json"]`
-- `["problem","laplacian"]`
-- `["problem","monte carlo"]`
-- `["problem","raytrace"]`
-- `["problem","seismic"]`
-- `["problem","simplex"]`
-- `["problem","spellcheck"]`
-- `["problem","stockcorr"]`
-- `["problem","ziggurat"]`
-- `["scalar","arithmetic"]`
-- `["scalar","fastmath"]`
-- `["scalar","iteration"]`
-- `["scalar","predicate"]`
-- `["shootout"]`
-- `["simd"]`
-- `["sort","insertionsort"]`
-- `["sort","issorted"]`
-- `["sort","mergesort"]`
-- `["sort","quicksort"]`
-- `["sparse","index"]`
-- `["sparse","transpose"]`
-- `["string"]`
-- `["tuple","index"]`
 
 ## Version Info
 
@@ -94,15 +113,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (19267.35546875 MB free)
-Uptime: 1.0907063e7 sec
-Load Avg:  1.0029296875  1.0146484375  0.94970703125
+Memory: 31.383651733398438 GB (19432.1015625 MB free)
+Uptime: 1.0911894e7 sec
+Load Avg:  0.974609375  0.52783203125  0.29638671875
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz    2390892 s          0 s    2164301 s  1083386923 s         35 s
-#2  3501 MHz    8837650 s          0 s     813189 s  1080501259 s          2 s
-#3  3501 MHz    2465489 s          0 s     971723 s  1086616904 s          5 s
-#4  3501 MHz    1996470 s          0 s     797371 s  1087486484 s          7 s
+#1  3501 MHz    2391223 s          0 s    2165852 s  1083866380 s         35 s
+#2  3501 MHz    9107901 s          0 s     814410 s  1080712732 s          2 s
+#3  3501 MHz    2466131 s          0 s     971870 s  1087099076 s          5 s
+#4  3501 MHz    1996546 s          0 s     797446 s  1087969313 s          7 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
@@ -122,15 +141,15 @@ Platform Info:
   WORD_SIZE: 64
            Ubuntu 14.04.4 LTS
   uname: Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64 x86_64
-Memory: 31.383651733398438 GB (19078.09375 MB free)
-Uptime: 1.0909561e7 sec
-Load Avg:  1.0029296875  1.0146484375  0.9599609375
+Memory: 31.383651733398438 GB (19429.84765625 MB free)
+Uptime: 1.091208e7 sec
+Load Avg:  1.0029296875  0.7548828125  0.427734375
 Intel(R) Xeon(R) CPU E3-1241 v3 @ 3.50GHz: 
        speed         user         nice          sys         idle          irq
-#1  3501 MHz    2390956 s          0 s    2165242 s  1083634717 s         35 s
-#2  3501 MHz    9086202 s          0 s     813958 s  1080501682 s          2 s
-#3  3501 MHz    2465749 s          0 s     971739 s  1086866381 s          5 s
-#4  3501 MHz    1996485 s          0 s     797384 s  1087736191 s          7 s
+#1  3501 MHz    2391242 s          0 s    2165932 s  1083884794 s         35 s
+#2  3501 MHz    9126056 s          0 s     814465 s  1080713103 s          2 s
+#3  3501 MHz    2466390 s          0 s     971889 s  1087117379 s          5 s
+#4  3501 MHz    1996562 s          0 s     797456 s  1087987869 s          7 s
 
   BLAS: libopenblas (USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell)
   LAPACK: libopenblas64_
